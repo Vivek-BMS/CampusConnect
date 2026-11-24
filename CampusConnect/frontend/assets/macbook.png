@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240">
+  <rect width="400" height="240" fill="#0F172A" />
+  <rect x="70" y="40" width="260" height="150" rx="10" fill="#1E293B" stroke="#334155" stroke-width="2" />
+  <rect x="80" y="50" width="240" height="130" rx="6" fill="#0284C7" opacity="0.3" />
+  <path d="M190 110 C190 95, 210 95, 210 110 C210 125, 190 125, 190 110" fill="#FFFFFF" />
+  <path d="M40 190 L360 190 L340 205 L60 205 Z" fill="#334155" />
+  <text x="200" y="105" font-family="sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">MacBook Air M2</text>
+  <text x="200" y="125" font-family="sans-serif" font-size="11" fill="#94A3B8" text-anchor="middle">Midnight Blue • 13-inch</text>
+</svg>

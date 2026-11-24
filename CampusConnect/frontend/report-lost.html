@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Report Lost Item – CampusConnect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <div class="app-container">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="brand-icon">🎓</div>
+        <div class="brand-title">Campus<span>Connect</span></div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="sidebar-item">
+          <span>📊</span> <span data-i18n="dashboard">Dashboard</span>
+        </a>
+        <a href="report-lost.html" class="sidebar-item active">
+          <span>🔍</span> <span data-i18n="reportLostBtn">Report Lost Item</span>
+        </a>
+        <a href="report-found.html" class="sidebar-item">
+          <span>📦</span> <span data-i18n="reportFoundBtn">Report Found Item</span>
+        </a>
+        <a href="browse-items.html" class="sidebar-item">
+          <span>🌐</span> <span data-i18n="browseItemsBtn">Browse Items</span>
+        </a>
+        <a href="dashboard.html#matchesSection" class="sidebar-item">
+          <span>⚡</span> <span data-i18n="potentialMatches">Potential Matches</span>
+        </a>
+        <a href="#" class="sidebar-item" onclick="App.openModal('notificationsModal'); return false;">
+          <span>🔔</span> <span data-i18n="notifications">Notifications</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="user-profile-badge">
+          <div class="user-avatar">RS</div>
+          <div class="user-info">
+            <div class="user-name current-user-name">Rahul Sharma</div>
+            <div class="user-role current-user-role">Student</div>
+          </div>
+        </div>
+        <button class="btn btn-sm btn-outline action-logout" style="width: 100%; margin-top: 14px; border-color: rgba(255,255,255,0.2); color: white;">
+          🚪 <span data-i18n="logout">Logout</span>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Main Content Wrapper -->
+    <div class="main-wrapper">
+      
+      <!-- Top Navbar -->
+      <header class="top-navbar">
+        <div style="display: flex; align-items: center; gap: 14px;">
+          <button class="mobile-menu-btn" style="display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: #142B4A;">
+            ☰
+          </button>
+          <div class="top-navbar-title">Report Lost Belonging</div>
+        </div>
+
+        <div class="top-navbar-actions">
+          <button class="lang-toggle lang-toggle-btn">
+            🌐 <span class="lang-label">ಕನ್ನಡ</span>
+          </button>
+          <a href="browse-items.html" class="btn btn-sm btn-outline">Browse Items</a>
+        </div>
+      </header>
+
+      <!-- Content Body -->
+      <main class="content-body" style="max-width: 900px; margin: 0 auto;">
+        
+        <div class="card" style="padding: 32px;">
+          <div style="margin-bottom: 24px; border-bottom: 1px solid #E2E8F0; padding-bottom: 16px;">
+            <span class="badge badge-lost" style="margin-bottom: 8px;">LOST REPORTING</span>
+            <h2 style="color: #142B4A; font-size: 1.5rem;">Report a Missing Article</h2>
+            <p style="color: #64748B; font-size: 0.9rem; margin-top: 4px;">
+              Provide comprehensive details so our Java Smart Matching algorithm can automatically compare against found inventory.
+            </p>
+          </div>
+
+          <form id="reportLostForm">
+            <div class="form-group">
+              <label class="form-label" for="lostTitle">Item Name / Title *</label>
+              <input type="text" id="lostTitle" class="form-control" placeholder="e.g. MacBook Air M2 13-inch or Black Leather Wallet" required>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+              <div class="form-group">
+                <label class="form-label" for="lostCategory">Category *</label>
+                <select id="lostCategory" class="form-select" required>
+                  <option value="" disabled selected>Select Item Category</option>
+                  <option value="Electronics">Electronics</option>
+                  <option value="ID Cards">ID Cards</option>
+                  <option value="Books">Books</option>
+                  <option value="Bags">Bags</option>
+                  <option value="Wallets">Wallets</option>
+                  <option value="Accessories">Accessories</option>
+                  <option value="Clothing">Clothing</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="lostColor">Primary Colour</label>
+                <input type="text" id="lostColor" class="form-control" placeholder="e.g. Midnight Blue, Black, Matte Silver">
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+              <div class="form-group">
+                <label class="form-label" for="lostBrand">Brand / Manufacturer</label>
+                <input type="text" id="lostBrand" class="form-control" placeholder="e.g. Apple, Dell, Titan, Noise, Wildcraft">
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="lostLocation">Lost Location (Campus Area) *</label>
+                <input type="text" id="lostLocation" class="form-control" placeholder="e.g. Central Library 2nd Floor, Food Court, Mech Lab" required>
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+              <div class="form-group">
+                <label class="form-label" for="lostDate">Date Lost *</label>
+                <input type="date" id="lostDate" class="form-control" required>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label" for="lostTime">Approximate Time</label>
+                <input type="time" id="lostTime" class="form-control">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="lostDescription">Public Description *</label>
+              <textarea id="lostDescription" class="form-control" placeholder="Describe the physical condition, stickers, case, or outer appearance..." required></textarea>
+            </div>
+
+            <!-- Image Upload & Preview -->
+            <div class="form-group">
+              <label class="form-label">Upload Photograph (Optional)</label>
+              <div class="image-upload-box" onclick="document.getElementById('lostImageFile').click()">
+                <div style="font-size: 2rem; margin-bottom: 6px;">📷</div>
+                <div style="font-weight: 600; color: #142B4A; font-size: 0.95rem;">Click to upload reference photo</div>
+                <div style="font-size: 0.8rem; color: #64748B;">Supported formats: JPG, PNG, WEBP (Max 10MB)</div>
+                <input type="file" id="lostImageFile" class="image-file-input" accept="image/*" style="display: none;">
+                <input type="hidden" id="lostImageUrlHidden" class="image-url-hidden">
+                <img src="" class="image-upload-preview" alt="Preview">
+              </div>
+            </div>
+
+            <!-- Secret / Private Identifying Marks -->
+            <div class="form-group" style="background: #FFFBEB; border: 1px solid #FDE68A; border-radius: 10px; padding: 18px;">
+              <label class="form-label" for="lostPrivateDetails" style="color: #92400E; display: flex; align-items: center; gap: 6px;">
+                <span>🔒</span> Confidential Identifying Details (Ownership Proof)
+              </label>
+              <textarea id="lostPrivateDetails" class="form-control" style="background: white;" placeholder="Private serial number, lock screen hint, specific scratch location, cards inside wallet, or distinguishing mark..."></textarea>
+              <div class="form-helper" style="color: #B45309;">
+                ⚠️ This secret detail is never visible on public browse pages. It is only accessible to administrators and security officers to verify matching claims.
+              </div>
+            </div>
+
+            <div style="display: flex; justify-content: flex-end; gap: 14px; margin-top: 24px;">
+              <a href="dashboard.html" class="btn btn-outline">Cancel</a>
+              <button type="submit" class="btn btn-danger btn-lg">
+                Submit Lost Report
+              </button>
+            </div>
+          </form>
+        </div>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/items.js"></script>
+</body>
+</html>

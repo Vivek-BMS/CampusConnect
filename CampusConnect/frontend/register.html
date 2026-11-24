@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration – CampusConnect</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body style="min-height: 100vh; display: flex; flex-direction: column; background: #F5F7FA;">
+
+  <!-- Nav Header -->
+  <nav class="public-nav">
+    <div class="public-nav-container">
+      <a href="index.html" class="nav-brand">
+        <div class="brand-icon">🎓</div>
+        <span>CampusConnect</span>
+      </a>
+      <div class="nav-actions">
+        <button class="lang-toggle lang-toggle-btn">
+          🌐 <span class="lang-label">ಕನ್ನಡ</span>
+        </button>
+        <a href="login.html" class="btn btn-outline">Sign In</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Register Main Container -->
+  <main style="flex-grow: 1; display: flex; align-items: center; justify-content: center; padding: 40px 20px;">
+    <div class="card auth-box" style="max-width: 520px; width: 100%; padding: 36px; border-radius: 16px;">
+      
+      <div style="text-align: center; margin-bottom: 28px;">
+        <div style="width: 48px; height: 48px; background: #EFF6FF; color: #3B82F6; border-radius: 12px; display: inline-flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 12px;">
+          🎓
+        </div>
+        <h2 style="color: #142B4A; font-size: 1.6rem; font-weight: 800;">Create Student Account</h2>
+        <p style="color: #64748B; font-size: 0.9rem; margin-top: 4px;">Join your campus digital lost and found network</p>
+      </div>
+
+      <form id="registerForm">
+        <div class="form-group">
+          <label class="form-label" for="regFullName">Full Name *</label>
+          <input type="text" id="regFullName" class="form-control" placeholder="e.g. Rahul Sharma" required>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+          <div class="form-group">
+            <label class="form-label" for="regStudentId">Student ID / USN *</label>
+            <input type="text" id="regStudentId" class="form-control" placeholder="e.g. 1RV21CS045" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="regDepartment">Department *</label>
+            <select id="regDepartment" class="form-select" required>
+              <option value="" disabled selected>Select Department</option>
+              <option value="Computer Science & Engineering">Computer Science & Engineering</option>
+              <option value="Electronics & Communication">Electronics & Communication</option>
+              <option value="Information Science & Engineering">Information Science & Engineering</option>
+              <option value="Mechanical Engineering">Mechanical Engineering</option>
+              <option value="Civil Engineering">Civil Engineering</option>
+              <option value="Electrical & Electronics">Electrical & Electronics</option>
+              <option value="Artificial Intelligence & ML">Artificial Intelligence & ML</option>
+              <option value="Biotechnology">Biotechnology</option>
+              <option value="MBA / Management">MBA / Management</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="regEmail">College Institutional Email *</label>
+          <input type="email" id="regEmail" class="form-control" placeholder="student@campus.edu" required>
+          <div class="form-helper">Must be a valid student university email address.</div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="regPhone">Contact Phone Number (Optional)</label>
+          <input type="tel" id="regPhone" class="form-control" placeholder="+91 98450 12345">
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+          <div class="form-group">
+            <label class="form-label" for="regPassword">Password *</label>
+            <input type="password" id="regPassword" class="form-control" placeholder="Min. 6 chars" minlength="6" required>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="regConfirmPassword">Confirm Password *</label>
+            <input type="password" id="regConfirmPassword" class="form-control" placeholder="Re-enter password" required>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg" style="width: 100%; margin-top: 10px;">
+          Complete Registration
+        </button>
+      </form>
+
+      <div style="text-align: center; margin-top: 24px; padding-top: 20px; border-top: 1px solid #F1F5F9; font-size: 0.9rem; color: #64748B;">
+        Already registered? <a href="login.html" style="font-weight: 600;">Sign In here</a>
+      </div>
+    </div>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/auth.js"></script>
+</body>
+</html>

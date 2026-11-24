@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusConnect – Intelligent Campus Lost & Found System</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Top Public Navigation -->
+  <nav class="public-nav">
+    <div class="public-nav-container">
+      <a href="index.html" class="nav-brand">
+        <div class="brand-icon">🎓</div>
+        <span>CampusConnect</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link active">Home</a></li>
+        <li><a href="#howItWorks" class="nav-link">How It Works</a></li>
+        <li><a href="#features" class="nav-link">Features</a></li>
+        <li><a href="browse-items.html" class="nav-link" data-i18n="browseItemsBtn">Browse Items</a></li>
+        <li><a href="#stats" class="nav-link">Campus Stats</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <!-- Language Switcher -->
+        <button class="lang-toggle lang-toggle-btn" title="Toggle English / Kannada">
+          🌐 <span class="lang-label">ಕನ್ನಡ</span>
+        </button>
+        <a href="login.html" class="btn btn-outline" data-i18n="loginBtn">Sign In</a>
+        <a href="register.html" class="btn btn-primary" data-i18n="registerBtn">Register</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-section" style="padding: 90px 20px 80px; text-align: center; background: radial-gradient(circle at 50% 20%, #EFF6FF 0%, #F5F7FA 70%);">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <div style="display: inline-flex; align-items: center; gap: 8px; background: white; border: 1px solid #DBEAFE; padding: 6px 16px; border-radius: 9999px; font-size: 0.85rem; font-weight: 600; color: #1D4ED8; margin-bottom: 24px; box-shadow: 0 2px 6px rgba(0,0,0,0.04);">
+        ✨ Java Spring Boot + AI-Weighted Smart Matching
+      </div>
+      <h1 class="hero-title" style="font-size: 3.2rem; font-weight: 800; color: #142B4A; letter-spacing: -0.5px; margin-bottom: 20px; line-height: 1.15;" data-i18n="tagline">
+        Lost Something? Let's Find It Together.
+      </h1>
+      <p class="hero-subtitle" style="font-size: 1.2rem; color: #475569; max-width: 740px; margin: 0 auto 36px; line-height: 1.6;" data-i18n="heroSubtitle">
+        A centralized digital platform for college campuses to manage lost and found belongings. Powered by smart matching, verified ownership claims, and digital handover custody tracking.
+      </p>
+
+      <div class="hero-cta" style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+        <a href="report-lost.html" class="btn btn-danger btn-lg" style="box-shadow: 0 4px 14px rgba(239, 68, 68, 0.3);" data-i18n="reportLostBtn">
+          🔍 Report Lost Item
+        </a>
+        <a href="report-found.html" class="btn btn-primary btn-lg" data-i18n="reportFoundBtn">
+          📦 Report Found Item
+        </a>
+        <a href="browse-items.html" class="btn btn-outline btn-lg" data-i18n="browseItemsBtn">
+          🌐 Browse Campus Inventory
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Statistics Section -->
+  <section id="stats" style="padding: 40px 20px 60px; max-width: 1200px; margin: 0 auto;">
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon red">🔎</div>
+        <div>
+          <div class="stat-label" data-i18n="totalLost">Total Lost Reports</div>
+          <div class="stat-value" id="statTotalLost">14</div>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon blue">📦</div>
+        <div>
+          <div class="stat-label" data-i18n="totalFound">Total Found Reports</div>
+          <div class="stat-value" id="statTotalFound">18</div>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon orange">⚡</div>
+        <div>
+          <div class="stat-label" data-i18n="potentialMatches">Potential Matches</div>
+          <div class="stat-value" id="statPotentialMatches">9</div>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon green">✅</div>
+        <div>
+          <div class="stat-label" data-i18n="recoveredItems">Recovered Items</div>
+          <div class="stat-value" id="statRecovered">11</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section id="howItWorks" style="padding: 70px 20px; background: white; border-top: 1px solid #E2E8F0; border-bottom: 1px solid #E2E8F0;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div style="text-align: center; margin-bottom: 50px;">
+        <span class="badge badge-found" style="margin-bottom: 10px;">RELIABLE RECOVERY WORKFLOW</span>
+        <h2 style="font-size: 2.2rem; color: #142B4A;" data-i18n="howItWorksTitle">How CampusConnect Works</h2>
+        <p style="color: #64748B; max-width: 600px; margin: 8px auto 0;">Seamless 4-step lifecycle ensuring high verification integrity and zero false handovers.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 28px;">
+        <div class="card" style="box-shadow: none; border-color: #E2E8F0;">
+          <div style="font-size: 2rem; margin-bottom: 14px;">📝</div>
+          <h3 style="font-size: 1.15rem; margin-bottom: 8px;" data-i18n="step1Title">1. Report Belongings</h3>
+          <p style="font-size: 0.9rem; color: #64748B;" data-i18n="step1Desc">
+            Submit details of lost or found articles with photos, location, and identifying marks.
+          </p>
+        </div>
+
+        <div class="card" style="box-shadow: none; border-color: #E2E8F0;">
+          <div style="font-size: 2rem; margin-bottom: 14px;">🧠</div>
+          <h3 style="font-size: 1.15rem; margin-bottom: 8px;" data-i18n="step2Title">2. Smart Matching</h3>
+          <p style="font-size: 0.9rem; color: #64748B;" data-i18n="step2Desc">
+            Our Java algorithm cross-checks title, category, color, location, and date to spot matches.
+          </p>
+        </div>
+
+        <div class="card" style="box-shadow: none; border-color: #E2E8F0;">
+          <div style="font-size: 2rem; margin-bottom: 14px;">🛡️</div>
+          <h3 style="font-size: 1.15rem; margin-bottom: 8px;" data-i18n="step3Title">3. Verify Ownership</h3>
+          <p style="font-size: 0.9rem; color: #64748B;" data-i18n="step3Desc">
+            Submit private ownership proof only visible to campus safety staff for verification.
+          </p>
+        </div>
+
+        <div class="card" style="box-shadow: none; border-color: #E2E8F0;">
+          <div style="font-size: 2rem; margin-bottom: 14px;">🤝</div>
+          <h3 style="font-size: 1.15rem; margin-bottom: 8px;" data-i18n="step4Title">4. Physical Handover</h3>
+          <p style="font-size: 0.9rem; color: #64748B;" data-i18n="step4Desc">
+            Collect item securely at campus security desk with digital handover acknowledgement.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Platform Features Section -->
+  <section id="features" style="padding: 80px 20px; max-width: 1200px; margin: 0 auto;">
+    <div style="text-align: center; margin-bottom: 50px;">
+      <span class="badge badge-lost" style="margin-bottom: 10px;">ENTERPRISE ARCHITECTURE</span>
+      <h2 style="font-size: 2.2rem; color: #142B4A;">Platform Features Built for Campus Scale</h2>
+      <p style="color: #64748B; max-width: 600px; margin: 8px auto 0;">Engineered with Spring Security, role-based protection, and zero public data leaks.</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 24px;">
+      <div class="card">
+        <h4 style="margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
+          <span>⚖️</span> Weighted Similarity Engine
+        </h4>
+        <p style="font-size: 0.9rem; color: #64748B;">
+          Evaluates Category (20%), Title Levenshtein (25%), Color (15%), Brand (10%), Location (15%), Date gap (10%), and description keywords (5%).
+        </p>
+      </div>
+
+      <div class="card">
+        <h4 style="margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
+          <span>🔒</span> Private Ownership Vault
+        </h4>
+        <p style="font-size: 0.9rem; color: #64748B;">
+          Secret serial numbers, laptop passwords, and inside contents are concealed from public browse and strictly visible to authorized verifiers.
+        </p>
+      </div>
+
+      <div class="card">
+        <h4 style="margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
+          <span>📱</span> Digital QR Inventory Labels
+        </h4>
+        <p style="font-size: 0.9rem; color: #64748B;">
+          Automatic QR code generator for found items allows the campus security desk to tag locker bins and scan directly for verification.
+        </p>
+      </div>
+
+      <div class="card">
+        <h4 style="margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
+          <span>🔔</span> In-App Reactive Notifications
+        </h4>
+        <p style="font-size: 0.9rem; color: #64748B;">
+          Instant alerts whenever a high-confidence match is detected, claims are submitted, or handovers are approved.
+        </p>
+      </div>
+
+      <div class="card">
+        <h4 style="margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
+          <span>📊</span> Chart.js Recovery Analytics
+        </h4>
+        <p style="font-size: 0.9rem; color: #64748B;">
+          Monthly resolution trends, category breakdowns, and audit trails help campus safety monitor recovery rates.
+        </p>
+      </div>
+
+      <div class="card">
+        <h4 style="margin-bottom: 8px; display: flex; align-items: center; gap: 8px;">
+          <span>🌐</span> English & Kannada Bilingualism
+        </h4>
+        <p style="font-size: 0.9rem; color: #64748B;">
+          Full support for local language accessibility across student dashboards and report submission forms.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background-color: #142B4A; color: white; padding: 60px 20px 30px;">
+    <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 40px; margin-bottom: 40px;">
+      <div>
+        <div style="display: flex; align-items: center; gap: 10px; font-size: 1.35rem; font-weight: 800; margin-bottom: 14px;">
+          <div class="brand-icon">🎓</div>
+          CampusConnect
+        </div>
+        <p style="color: #94A3B8; font-size: 0.9rem; line-height: 1.6;">
+          Centralized Lost and Found Management Platform. Designed for college campuses, safety offices, and student welfare.
+        </p>
+      </div>
+
+      <div>
+        <h5 style="color: white; margin-bottom: 14px; font-size: 1rem;">Campus Safety Desks</h5>
+        <ul style="list-style: none; color: #94A3B8; font-size: 0.875rem; display: flex; flex-direction: column; gap: 8px;">
+          <li>📍 Main Security Gate Office (24x7)</li>
+          <li>📍 Central Library Lost & Found Desk</li>
+          <li>📍 Sports Complex Admin Room</li>
+          <li>📞 Emergency Helpline: 080-2845-9000</li>
+        </ul>
+      </div>
+
+      <div>
+        <h5 style="color: white; margin-bottom: 14px; font-size: 1rem;">Quick Links</h5>
+        <ul style="list-style: none; font-size: 0.875rem; display: flex; flex-direction: column; gap: 8px;">
+          <li><a href="browse-items.html" style="color: #CBD5E1;">Browse All Items</a></li>
+          <li><a href="report-lost.html" style="color: #CBD5E1;">Report Lost Item</a></li>
+          <li><a href="report-found.html" style="color: #CBD5E1;">Report Found Item</a></li>
+          <li><a href="login.html" style="color: #CBD5E1;">Staff & Student Portal</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h5 style="color: white; margin-bottom: 14px; font-size: 1rem;">System Architecture</h5>
+        <p style="color: #94A3B8; font-size: 0.85rem; line-height: 1.5;">
+          Spring Boot 3.3.4 REST APIs • Spring Security 6 • MySQL Database • JWT Auth • Responsive HTML5 / CSS3 • Chart.js
+        </p>
+      </div>
+    </div>
+
+    <div style="max-width: 1200px; margin: 0 auto; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 24px; text-align: center; color: #94A3B8; font-size: 0.85rem;">
+      © 2026 CampusConnect. All Rights Reserved. Built for College Engineering Demonstration.
+    </div>
+  </footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/i18n.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

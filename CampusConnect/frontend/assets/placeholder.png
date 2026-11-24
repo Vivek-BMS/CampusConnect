@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="400" height="240">
+  <rect width="400" height="240" fill="#F1F5F9" />
+  <rect x="75" y="45" width="250" height="150" rx="12" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="2" />
+  <circle cx="200" cy="110" r="32" fill="#94A3B8" />
+  <path d="M185 110 L215 110 M200 95 L200 125" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" />
+  <text x="200" y="165" font-family="sans-serif" font-size="14" font-weight="600" fill="#64748B" text-anchor="middle">Campus Item Photograph</text>
+</svg>
